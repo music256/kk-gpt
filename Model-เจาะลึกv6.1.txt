@@ -1,0 +1,290 @@
+Model-เจาะลึกv6
+
+
+
+### นี่คือข้อมูลเฉพาะของผู้ใช้ ในระบบ GPT Plus (UI) เท่านั้น ไม่ใช่ API ย้ำ ”ไม่ใช่ API“ ###
+
+---
+
+### GPT‑4.5
+    อัพเดทล่าสุด:(04/07/2025)
+
+Quota (โควต้า/ราคา UI Plus): 10ข้อความ/สัปดาห์  
+Context Window (หน้าต่างคอนเท็กซ์ UI Plus): 32K
+
+ Benchmarks (คะแนนวัดผล):
+- Multilingual MMLU: ~85.1% (เหนือกว่า GPT‑4o 81.5%)
+- GPQA (science): 71.4% vs GPT‑4o 53.6%
+- AIME ’24 (math): 36.7% vs GPT‑4o ~9.3%
+- SimpleQA: accuracy สูงสุด, hallucination ต่ำ (~37.1% vs GPT‑4o ~61.8%)
+- รองรับ multimodal (text+image) + function calling/streaming
+
+ จุดเด่น (Strengths)
+- การสนทนาธรรมชาติขึ้น (EQ สูง) และเข้าใจ “vibe” ของผู้ใช้ได้ดี
+- ความแม่นยำข้อมูลสูง ลด hallucinations ~37%
+- ตรวจเอกสาร,ข้อสอบ ได้อย่างแม่นยำ
+- เหมาะกับงานสร้างสรรค์/วิเคราะห์/เขียนเนื้อหา ที่ต้องการ tone เป็นธรรมชาติ/ภาษา/nuance/ความเข้าใจอารมณ์  
+- ตัวเลือกแรกสำหรับบทความวิเคราะห์ทั่วไป รายงาน ESG, รายงานธุรกิจ, content creation, HR report ฯลฯ
+
+ ข้อจำกัด (Limitations)
+- Reasoning และคณิตศาสตร์ยังตามหลัง o3‑mini (GPQA, AIME)
+- โควต้าต่ำมาก แม่จะเขียนบทความทั่วไป/ภาษาได้ดีกว่า 4o แต่ควรใช้ 4o คุ้มกว่า 
+- ไม่เหมาะกับงานตรรกะลึก/เทคนิค/คณิต/วิทยาศาสตร์หนักๆ (ใช้ o3 แทน)
+
+ ข้อแนะนำการใช้งาน (Recommended Use)
+- งานสร้างสรรค์ / เขียนเนื้อหา: บรรยาย สร้าง dialogue หรือ copywriting ที่เป็นธรรมชาติและมี emotional nuance
+- Content/creative, general analysis, รายงาน ESG, business summary, content creation, HR report
+- Customer support & conversational agent: เหมาะกับบทบาทที่ต้อง ‘เข้าใจคน’ และแก้ปัญหาผ่านบทสนทนา
+- Multilingual knowledge retrieval: คำตอบภาษาต่างๆ แม่นกว่า GPT‑4o
+- งานทั่วไปถ่วง reasoning ปานกลาง: เช่น สรุปข้อมูล เอกสาร
+- ตรวจเอกสารสำคัญ QA, Qc
+
+> **หมายเหตุ:**  
+> ถ้างานเป็นเชิงตรรกะลึก วิทยาศาสตร์ คณิตศาสตร์ งานโค้ด หรือสัญญากฎหมายลึก ให้เลือก o3
+
+---
+
+### o1
+     อัพเดทล่าสุด:(04/07/2025)
+
+Quota (โควต้า/ราคา UI Plus): 50ข้อความ/สัปดาห์  
+Context Window (หน้าต่างคอนเท็กซ์ UI Plus): 32K
+
+ Benchmarks (คะแนนวัดผล):
+ - แข่งขันทางวิชาการ/คณิตศาสตร์
+- AIME: o1‑ทำได้ 78% (เทียบ GPT‑4o ได้ 13%)
+- Ennis‑Weir Critical Thinking Essay: ทำได้สูงกว่านักศึกษาปริญญาโทที่ 24.33 vs 18.39
+- วิทยาศาสตร์: ตอบ PhD‑level สอบผ่าน ≈78% accuracy
+
+จุดเด่น (Strengths):
+- reasoning แบบ chain‑of‑thought ขั้นสูง (System 2)
+- ตอบโจทย์ math, coding, วิทยาศาสตร์ ได้ PhD‑level ความแม่นยำสูง
+- Run Deep Research ดีที่สุดใน GPT Plus UI
+
+ข้อจำกัด (Limitations):
+- **o1 ใน Plus(UI) ไม่รองรับภาพ+ไฟล์ และไม่สามารถใช้งานใน Project Chat & My GPTs ได้
+ใช้ได้แค่ New Chat เท่านั้น**
+- ช้าและใช้ compute สูงกว่า GPT-4o
+- บางกรณีมี “fake alignment” พบตอบที่ขัดกับ reasoning chain ~0.38%
+- ความเร็วต่ำกว่าโมเดล lightweight และ time‑sensitive tasks
+
+ข้อแนะนำการใช้งาน (Recommended Use):
+- โหมด “Run Deep Research” o1 จะให้ผลลัพธ์ ออกมาดีแล้วคุ้มค่าการใช้งานมากที่สุด (ดีกว่าo3)
+- โจทย์เชิงตรรกะ complex math/science/coding ใช้ o1 หรือ o3
+- งานวิจัยลึก/PhD-level questions: o1 เหมาะมาก (ค่าใช้จ่ายสูง)
+- การวิเคราะห์เอกสาร( **o1 ใน Plus(UI) ไม่รองรับภาพ+ไฟล์ และไม่สามารถใช้งานใน Project Chat & My GPTs ได้
+ใช้ได้แค่ New Chat เท่านั้น**)
+- essay reasoning หรือ kritical thinking essay: ใช้ o1
+- งานทั่วไปหรือใช้งานประจำที่ต้องเร็ว/ประหยัด: ใช้ o4‑mini, GPT‑4o
+
+---
+### o3
+    อัพเดทล่าสุด: 04/07/2025
+
+Quota (โควต้า/ราคา UI Plus): 100ข้อความ/สัปดาห์  
+Context Window (หน้าต่างคอนเท็กซ์ UI Plus): 32K
+
+Benchmarks (คะแนนวัดผล):
+- SWE-bench (software engineering): o3: 71.7% vs o1: 48.9% (o3 สูงกว่าอย่างมีนัยยะ)
+- Codeforces Elo: o3: 2727 vs o1: 1891 (o3 สูงกว่าอย่างมีนัยยะ)
+- ARC‑AGI: Accuracy สูงกว่า o1 ถึง 3 เท่า, ~87.5%
+- HLE benchmark: o3 ทำได้ 26.6%, ส่วน o3‑mini‑high: ~13%
+- สรุป: o3 ทะลุหลาย benchmark ที่เจาะจง logic/coding/science
+
+ จุดเด่น (Strengths)
+- reasoning แบบ multi-step, private chain-of-thought reasoning
+- เหมาะกับโจทย์ reasoning เชิงลึก หรือปัญหาเชิงเทคนิคสูง เช่น คณิตศาสตร์ วิทยาศาสตร์ โค้ดที่ซับซ้อน
+- เด่นมากใน logic, code, science และงานที่มีโครงสร้างซับซ้อน
+- แสดงผล benchmark ที่เหนือกว่า o1 ชัดเจน
+- รองรับการประมวลผลภาพแบบ technical
+- เหมาะกับงานที่ต้องการความแม่นยำสูง วิเคราะห์โครงสร้าง/ตรรกะเชิงลึก เช่น วิทยานิพนธ์, สัญญากฎหมายเชิงลึก, วิเคราะห์งานวิจัย
+
+ ข้อจำกัด (Limitations)
+- Hallucination rate ค่อนข้างสูง: 51% สำหรับ SimpleQA (เทียบกับ o1 ที่ 44%)
+- ใช้ compute สูง และไม่เหมาะกับงาน real-time หรือ budget ต่ำ
+- ไม่เหมาะกับงานเขียนเนื้อหาทั่วไป งานสร้างสรรค์ หรือบทความที่เน้นภาษาและ nuance (แนะนำ GPT‑4.5)
+
+ ข้อแนะนำการใช้งาน (Recommended Use)
+- งานที่เน้นตรรกะลึก (deep reasoning) หรือเชิงเทคนิค/วิทยาศาสตร์ เช่น
+    - วิเคราะห์เอกสารหรือสัญญากฎหมายเชิงลึก
+    - วิทยานิพนธ์/งานวิจัยสายวิทยาศาสตร์ คณิตศาสตร์ เทคนิค
+    - โค้ด complex, code review, วิเคราะห์อัลกอริทึม
+- โจทย์คณิตศาสตร์ วิทยาศาสตร์ หรือ coding ที่ซับซ้อนหลายขั้นตอน
+- วิเคราะห์ข้อมูลเชิงตรรกะหรือข้อเท็จจริงศาสตร์
+- งานที่ต้องการความแม่นยำสูง ตรวจสอบได้ เช่น รายงานวิจัย รายงานเชิงลึก
+- ใช้ o3 สำหรับ “งานหนักจริง ๆ” (heavy technical/logic task)
+- **ไม่เหมาะกับงานเนื้อหาทั่วไป/บทความ/สร้างสรรค์ ให้ใช้ GPT‑4.5 แทน** 
+
+---
+
+### o4‑mini‑high
+     อัพเดทล่าสุด: 04/07/2025
+
+Quota (โควต้า/ราคา UI Plus): 100ข้อความ/วัน  
+Context Window (หน้าต่างคอนเท็กซ์ UI Plus): 32K
+
+Benchmarks (คะแนนวัดผล):
+- o4‑mini-high (Python) ทำ pass@1 = 99.5%, consensus@8 = 100% (ดีกว่า o3 ที่ 98.4%)
+- MMLU (via Artificial Analysis): สูง
+- Intelligence Index ≈ 0.832 (83.2%) คะแนน benchmark สูงกว่าเฉลี่ย
+- MATHEMATICS, coding, visual tasks—คำตอบแม่นยำและรวดเร็ว ตอบภายใน <1 นาที
+
+จุดเด่น (Strengths):
+- Excellent for STEM tasks with tool use & reasoning: AIME ≈ 99.5%
+- Throughput สูง: เหมาะกับ high‑volume usage
+- มาตรฐานสูงเทียบเท่า mini รุ่นอื่น ทั้ง math, coding, visual reasoning
+- ความแม่นยำดีขึ้นแบบ noticeable โดยเฉพาะกับปัญหาหลายขั้นตอนและโจทย์ที่ต้องการเชิงตรรกะ
+- คุ้มค่า ทั้งในด้านประสิทธิภาพ ค่าใช้จ่าย และความเร็ว
+- ผ่าน benchmark วิจัยล่าสุด ที่เน้นงานใหม่ ๆ (e.g., ResearchCodeBench)
+
+ข้อจำกัด (Limitations):
+- เถรตรง ไม่เหมาะแก่การคุยเล่น 
+- Latency ไม่ต่ำ หากเทียบกับ mini รุ่นอื่น
+- เวลาเริ่มตอบประมาณ 39 วินาที แม้ throughput สูง แต่ไม่เหมาะกับ tasks รีบเร่ง
+- Susceptible to gaslighting prompts 
+- งานวิจัยพบ accuracy ลด 25‑29% หลังถูกโจมตีทางเชิงความคิดที่ผิดพลาด
+
+ข้อแนะนำการใช้งาน (Recommended Use):
+- Ideal for high‑throughput STEM tasks: math, coding, visual input ที่ต้องใช้ reasoning แบบ tool-augmented
+- ใช้ o4‑mini-high สำหรับ accuracy สูง แต่ยังเร็วพอ
+- ประมวลผลภาพ เช่น วิเคราะห์ diagram, chart และ whiteboard ผ่าน multimodal input
+
+---
+
+### o4‑mini
+     อัพเดทล่าสุด: 04/07/2025
+
+Quota (โควต้า/ราคา UI Plus): 300ข้อความ/วัน  
+Context Window (หน้าต่างคอนเท็กซ์ UI Plus): 32K
+
+Benchmarks (คะแนนวัดผล):
+- MMLU: ได้ถึง 82.0% — สูงกว่า Gemini Flash & Claude Haiku
+- MGSM (math): 87.0%
+- HumanEval (coding): 87.2%
+- MMMU (multimodal reasoning): 59.4% — นำคู่แข่งด้วยกันในกลุ่มแพ็กเกจเล็ก
+
+จุดเด่น (Strengths):
+- รองรับ multimodal reasoning + tools เช่น vision, Python, browsing, image-edit ใน call เดียว
+- TTFT ต่ำ (<10 วินาที) และ throughput ดี — เหมาะกับการใช้งานจริงแบบเยอะ & ว่องไว
+
+ข้อจำกัด (Limitations):
+- Hallucination สูงมาก โดนกดดัน จาก system prompt & prompt มีสิทธิเอ๋อสูง
+- SimpleQA สูงถึง 79% — แย่ที่สุดในกลุ่ม reasoning models
+- Gazable / Gaslighting Vulnerable
+- หลง prompt ที่หลอกง่าย ตก gaslit test แล้ว accuracy ดรอป ~25–29%
+
+ข้อแนะนำการใช้งาน (Recommended Use):
+- generation or validation code, สอบถามเชิงตัวเลข
+- เหมาะกับ budget-conscious deployment — งานเยอะ ประหยัด
+- ใช้เมื่อ ต้องการ speed และ throughput — latency ต่ำ
+- ไม่เหมาะ กับงานที่ต้อง factual accuracy สูง เช่น ถามเหตุการณ์หรือข้อมูลบุคคลสำคัญละเอียด
+- ควรใช้เทคนิค prompt engineering + verification เช่นทวนความก่อนส่งคำตอบแยกถามทีละก้าว
+- ส่งไปตรวจ logic อีกโมเดลที่แม่นกว่า
+
+---
+
+### GPT‑4.1
+     อัพเดทล่าสุด: 04/07/2025
+
+Quota (โควต้า/ราคา UI Plus): 80ข้อความ/3ชั่วโมง  
+Context Window (หน้าต่างคอนเท็กซ์ UI Plus): 32K
+
+Benchmarks (คะแนนวัดผล):
+- จากแหล่งหลักต่าง ๆ รวมรีวิว:
+- MMLU: 80.1% — top-tier benchmark productivity
+- GPQA: 50.3% — ดีกว่า GPT‑4o และ 4.5
+- AIME: 9.8%, SWE‑Bench (coding): 54.6–55% — +21‑27% จาก GPT‑4o/4.5
+- Instruction‑following: รีวิว IFEval ~87% compliance vs GPT‑4o ~81%
+
+จุดเด่น (Strengths):
+- Coding-focused: SWE‑Bench 54.6–55%, ลด edit ผิดพลาดเหลือ 2%
+- ถูกลง 26% เมื่อเทียบ GPT‑4o (รวม latency และ cost)
+- Literal instruction-following — precision workflow สูง เหมาะงานเป๊ะ
+- มี Chain‑of‑Thought (CoT) แต่ต้องเปิด
+- เข้าใจมนุษย์สูง
+
+ข้อจำกัด (Limitations):
+- แม้จะ literal, แต่ prompt ต้องชัดเจน — โยงยอดกับเจ้าของ model บางจุด
+- ยังมี latency สูงกว่า 4o เล็กน้อย
+- เมื่อ contaxt window เต็ม จะสติหลุดสุดๆ
+- โกหก, อวย ผู้ใช้บ่อยพอๆกับ 4o ถ้า Prompt ไม่แน่นจริง
+
+ข้อแนะนำการใช้งาน (Recommended Use):
+- วิเคราะห์ codebase/scalable system
+- สร้าง agent/toolchains ระบบอัตโนมัติ
+- Multimodal data (text+image+video)
+- หลีกเลี่ยง tareas factual-sensitive หรือ prompt implicit — ขาดความอ่อนไหวใน instruction พวกนี้
+- สร้าง prompt ให้ explicit ชัดเจน เหมาะกับ literal-following behavior
+
+---
+
+### GPT‑4o (“Omni”)
+     อัพเดทล่าสุด: 04/07/2025
+
+Quota (โควต้า/ราคา UI Plus): 80ข้อความ/3ชั่วโมง  
+Context Window (หน้าต่างคอนเท็กซ์ UI Plus): 32K
+
+Benchmarks (คะแนนวัดผล):
+- MMLU: 88.7% (เหนือ GPT‑4 initial 86.5%)
+- Vision tasks (MMMU, MathVista, ChartQA): top-tier เช่น GPT‑4‑level
+- Processing speed: voice-to-voice latency ~232–320 ms (bot-human conversation speed)
+
+จุดเด่น (Strengths):
+- รองรับ multimodal ครบในโมเดลเดียว (text/image/audio/video)
+- พูดคุยสนุก
+- ค้นหาไอเดียร์ใหม่ๆ
+- เอกสาร
+- งานทั่วไป
+
+ข้อจำกัด (Limitations):
+- Reasoning chain-of-thought ไม่แม่นเท่า o3/o1 “frontier models” — เน้น interaction ไม่ซับ
+- Video preview ยังจำกัด, ไม่ support full video reasoning
+- โกหก,อวย,พูดมาก กับผู้ใช้เกินความจำเป็น
+
+ข้อแนะนำการใช้งาน (Recommended Use):
+- Voice interactive assistant: chat + voice translation + Q&A อย่างลื่นไหล
+ - Multimodal interactions: image captioning, editing, vision-based QA
+- Multilingual translation & transcription via audio/text
+- Magnetic Resonance Imaging(MRI)
+- เอกสาร,บทความ <1,000 คำ
+- พูดคุย,สอบถาม,แปลภาษา,ค้นหาไอเดียร์
+
+---
+
+### GPT‑4.1 Mini
+     อัพเดทล่าสุด: 04/07/2025
+
+Quota (โควต้า/ราคา UI Plus): 80ข้อความ/3ชั่วโมง  
+Context Window (หน้าต่างคอนเท็กซ์ UI Plus): 32K
+
+Benchmarks (คะแนนวัดผล):
+- MMLU: 80.1% — เทียบเท่า Full รุ่น
+- GPQA: 50.3% — เหมือน Full รุ่น
+- AIDE polyglot diffusion อัตรา 9.8% — ดีกว่า GPT‑4o Mini
+- SWE‑Bench: ตรงตาม Full รุ่น, latency ต่ำกว่า — x2–3 เร็วกว่า
+- Needle‑in‑a‑haystack: 100%
+
+จุดเด่น (Strengths):
+- เป็นโมเดลขนาดเล็กที่ให้ประสิทธิภาพ ใกล้เคียงหรือเหนือกว่า GPT‑4o บนหลาย benchmark แต่ มี latency ลดลงเกือบครึ่ง และ ประหยัดกว่า ~83%
+- ดีเยี่ยมสำหรับงาน coding และ instruction-following
+- งานภาษา แปลสั้นๆ1-2 ย่อหน้า ดีกว่า o4-mini
+- chat bot 
+
+
+ข้อจำกัด (Limitations):
+- Reasoning chain-of-thought ไม่เปิดแสดงอัตโนมัติ (prompt ต้อง explicit)
+- หลุด logic บ้างในโจทย์ซับซ้อนมาก — แต่โดยรวมใกล้ Full
+- ไม่มี multimodal audio/video support
+- คิดโจทย์รวดเดียว 10 ข้อไม่ได้
+- โจทย์ poker 10 ข้อ คะแนน=1/10(ต่ำกว่าโมเดลอื่นขาดลอย
+
+ข้อแนะนำการใช้งาน (Recommended Use):
+- งานทั่วไปที่ต้อง coding เช่น สร้างโค้ดง่าย ๆ, แก้ bug, แปล, สรุป — ต้องการประสิทธิภาพและแม่นยำ
+- Chat agent ที่ต้องการตอบเร็ว
+- Prompt playground หรือ multi-step reasoning workload
+- งานภาษาสั้นๆ/โค้ดที่เน้นความถูกต้องดีกว่า o4-mini
+- เลือกใช้ GPT‑4.1 แทน เมื่อ budget หรือ latency สำคัญ
+
+---
+
+
