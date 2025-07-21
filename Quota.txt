@@ -22,8 +22,8 @@ _____
 | o4-mini-high   | 100 ข้อความ/วัน     |
 | o4-mini        | 300 ข้อความ/วัน     |
 | GPT-4.1 (Full) | 80 ข้อความ / 3 ชม.  |
-| GPT-4o         | 80 ข้อความ / 3 ชม.  |
-| GPT-4.1 Mini   | **Unlimited usage**  |
+| GPT-4o (omni)  | 80 ข้อความ / 3 ชม.  |
+| GPT-4.1-mini   | **Unlimited usage**  |
 
 
 {
