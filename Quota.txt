@@ -1,8 +1,8 @@
+Quota.txt
+# Quota.txt
+# Quota.txt V.1.4
 
-# Quota.md
-# Quota.md V.1.4
-
-### Quota.md
+### Quota.txt
 - เป็นไฟล์ที่อัปเดตโควต้าของแต่ละโมเดลแบบเรียลไทม์ทุกสัปดาห์
 
 ### ผู้รับผิดชอบตรวจเช็คอัปเดตและแก้ไขไฟล์: QuotaGuardian (My GPTs)
@@ -64,4 +64,4 @@ _____
 
 
 
-**End of quota.md**
+**End of quota.txt**
