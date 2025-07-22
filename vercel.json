@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [{ "src": "api/**/*.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/api/quota", "dest": "/api/quota.js" },
+    { "src": "/api/quota.csv", "dest": "/api/quota.csv.js" },
+    { "src": "/api/version", "dest": "/api/version.js" },
+    { "src": "/api/quota.log", "dest": "/api/quota.log.js" }
+  ]
+}
