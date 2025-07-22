@@ -1,5 +1,3 @@
-export const config = { runtime: "edge" };
-
 import yaml from "js-yaml";
 
 const RULES_URL  = "https://raw.githubusercontent.com/music256/kk-gpt/main/rules_v1.yml";
