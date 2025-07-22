@@ -10,13 +10,17 @@ export default async function handler(req, res) {
     const jsonEnd = text.indexOf('<!--QUOTA_JSON_END-->');
 
     if (jsonStart === -1 || jsonEnd === -1) {
-      return res.status(500).json({ error: 'JSON markers not found in Quota.txt' });
+      return res.status(500).json({ error: 'Quota JSON section not found' });
     }
 
-    const jsonRaw = text.slice(jsonStart + 24, jsonEnd).trim();
+    const jsonRaw = text.slice(
+      jsonStart + '<!--QUOTA_JSON_START-->'.length,
+      jsonEnd
+    ).trim();
+
     const data = JSON.parse(jsonRaw);
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+    return res.status(200).json(data);
+  } catch (error) {
+    return res.status(500).json({ error: 'Failed to fetch or parse quota', details: error.message });
   }
 }
