@@ -1,21 +1,24 @@
 # rules_v1.yml
+# Model Selection Rules (B-Bolt v2)
+# Updated: 2025-07-21
 
 human:
-  allowed: [GPT-4.1, GPT-4o]
   priority: [GPT-4.1, GPT-4o]
   reasons:
-    GPT-4.1: "nuance คน + quota พอส่งบ่อย"
-    GPT-4o:  "fallback เมื่อ quota 4.1 เต็ม"
+    GPT-4.1: "ตอบละเอียด คนอ่านสบาย"
+    GPT-4o:  "สำรองเมื่อ 4.1 เต็ม"
 
 gto:
-  allowed: [o4-mini-high, o3]
   priority: [o4-mini-high, o3]
   reasons:
-    o4-mini-high: "ตัวเลข GTO เพียว, throughput สูง"
-    o3:           "ใช้เมื่อ mini-high quota เต็ม"
+    o4-mini-high: "คณิตล้วน, throughput สูง"
+    o3:           "สำรอง"
 
 hybrid:
-  allowed: [o3]
   priority: [o3]
   reasons:
-    o3: "ต้อง reasoning ลึก GTO+Exploit"
+    o3: "GTO + Exploit ต้อง reasoning"
+
+fallback:
+  if_all_priority_full: 
+    model: null  # quota เต็มทุกตัวใน priority → คืนค่า model: null
