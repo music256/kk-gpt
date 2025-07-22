@@ -1,0 +1,21 @@
+# rules_v1.yml
+
+human:
+  allowed: [GPT-4.1, GPT-4o]
+  priority: [GPT-4.1, GPT-4o]
+  reasons:
+    GPT-4.1: "nuance คน + quota พอส่งบ่อย"
+    GPT-4o:  "fallback เมื่อ quota 4.1 เต็ม"
+
+gto:
+  allowed: [o4-mini-high, o3]
+  priority: [o4-mini-high, o3]
+  reasons:
+    o4-mini-high: "ตัวเลข GTO เพียว, throughput สูง"
+    o3:           "ใช้เมื่อ mini-high quota เต็ม"
+
+hybrid:
+  allowed: [o3]
+  priority: [o3]
+  reasons:
+    o3: "ต้อง reasoning ลึก GTO+Exploit"
