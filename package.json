@@ -1,5 +1,4 @@
-{
-  "name": "kk-gpt",
-  "version": "1.0.0",
-  "type": "module"
-}
+npm i js-yaml
+git add package.json package-lock.json
+git commit -m "add js-yaml"
+git push
