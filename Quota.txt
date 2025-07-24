@@ -5,18 +5,74 @@
 
 <!--QUOTA_JSON_START-->
 {
-  "version": "1.6",
-  "updated": "2025-07-21T17:20:00+07:00",
-  "models": {
-    "GPT-4.5":        { "limit": 2/10,  "period": "week"      },
-    "o1":             { "limit": 50,  "period": "week"      },
-    "o3":             { "limit": 100, "period": "week"      },
-    "o4-mini-high":   { "limit": 100, "period": "day"       },
-    "o4-mini":        { "limit": 300, "period": "day"       },
-    "GPT-4.1(Full)":  { "limit": 80,  "period": "3hours"    },
-    "GPT-4o(omni)":   { "limit": 80,  "period": "3hours"    },
-    "GPT-4.1-mini":   { "limit": "unlimited", "period": "-" }
-  }
+  "version": "1.7",
+  "updated": "2025-07-24T12:30:00+07:00",
+  "models": [
+    {
+      "model": "GPT-4.5",
+      "period": "week",
+      "limit": 10,
+      "used": 8,
+      "remaining": 2,
+      "message_th": "GPT-4.5 เหลือ 2 จาก 10 ข้อความ (ต่อสัปดาห์)"
+    },
+    {
+      "model": "o1",
+      "period": "week",
+      "limit": 50,
+      "used": 4,
+      "remaining": 46,
+      "message_th": "o1 เหลือ 46 จาก 50 ข้อความ (ต่อสัปดาห์)"
+    },
+    {
+      "model": "o3",
+      "period": "week",
+      "limit": 100,
+      "used": 2,
+      "remaining": 98,
+      "message_th": "o3 เหลือ 98 จาก 100 ข้อความ (ต่อสัปดาห์)"
+    },
+    {
+      "model": "o4-mini-high",
+      "period": "day",
+      "limit": 100,
+      "used": 3,
+      "remaining": 97,
+      "message_th": "o4-mini-high เหลือ 97 จาก 100 ข้อความ (ต่อวัน)"
+    },
+    {
+      "model": "o4-mini",
+      "period": "day",
+      "limit": 300,
+      "used": 1,
+      "remaining": 299,
+      "message_th": "o4-mini เหลือ 299 จาก 300 ข้อความ (ต่อวัน)"
+    },
+    {
+      "model": "GPT-4.1(Full)",
+      "period": "3hours",
+      "limit": 80,
+      "used": 5,
+      "remaining": 75,
+      "message_th": "GPT-4.1(Full) เหลือ 75 จาก 80 ข้อความ (ต่อ 3 ชั่วโมง)"
+    },
+    {
+      "model": "GPT-4o(omni)",
+      "period": "3hours",
+      "limit": 80,
+      "used": 2,
+      "remaining": 78,
+      "message_th": "GPT-4o(omni) เหลือ 78 จาก 80 ข้อความ (ต่อ 3 ชั่วโมง)"
+    },
+    {
+      "model": "GPT-4.1-mini",
+      "period": "-",
+      "limit": "unlimited",
+      "used": 1,
+      "remaining": "unlimited",
+      "message_th": "GPT-4.1-mini ไม่จำกัดจำนวนการใช้งาน"
+    }
+  ]
 }
 <!--QUOTA_JSON_END-->
 
